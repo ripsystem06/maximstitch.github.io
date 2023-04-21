@@ -5,10 +5,10 @@ body {
 }
 
 #hola h1 {
-	ffont-family: 'Montserrat', sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	color:black;
-  text-align: center;
-  margin-top: 50px; /* ajusta este valor según tu diseño */
+  	text-align: center;
+  	margin-top: 50px; /* ajusta este valor según tu diseño */
 }
 
 form {
