@@ -5,6 +5,7 @@ body {
 }
 
 #hola h1 {
+	font-family: Arial;
 	color:black;
   text-align: center;
   margin-top: 50px; /* ajusta este valor según tu diseño */
