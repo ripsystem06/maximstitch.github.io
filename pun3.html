@@ -25,7 +25,7 @@
   </form>
 
   <script>
-    alert("Esto es un simulador para calcular las puntadas de un diseño");
+    alert("Esto es un simulador para calcular un aproximado de puntadas para un diseño.\nInstrcciones:\n-Carga un archivo\n-Presiona Calcular y obten resultado\n-Presiona reiniciar y carga otro archivo")
     const input = document.querySelector('input[type="file"]');
 const preview = document.querySelector('#preview');
 const calculateButton = document.querySelector('#calculate-button');
@@ -39,6 +39,7 @@ function resetForm() {
   preview.src = '';
   input.value = '';
   pixelCount.textContent = '';
+  document.querySelector('#result').style.display = 'none';
 }
 
 input.addEventListener('change', (event) => {
@@ -88,11 +89,14 @@ calculateButton.addEventListener('click', () => {
     // Mostrar el resultado
   const result = document.querySelector('#result');
   result.style.display = 'block';
+  setTimeout(() => { result.style.display = 'none'; }, 9000);
+    setTimeout(() => { preview.src = ''; }, 9000);
 });
 
 resetButton.addEventListener('click', () => {
   resetForm();
   resetButton.disabled = true;
+  result.style.display = 'none';
 });
   </script>
 </body>
