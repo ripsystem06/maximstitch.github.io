@@ -12,45 +12,37 @@ body {
 }
 
 form {
-		display: flex;
-  		flex-direction: column;
-  		justify-content: center;
-  		align-items: center;
-  		background-color: #f2f2f2;
-  		border: 1px solid #ccc;
-  		border-radius: 5px;
-  		box-shadow: 0px 0px 5px #ccc;
-  		max-width: 500px;
-  		margin:  auto;
-  		padding: auto;
-  		font-family: 'Montserrat', sans-serif;
-
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px #ccc;
+  max-width: 500px;
+  margin:  auto;
+  padding: auto;
+  font-family: 'Montserrat', sans-serif;
 }
 
-
-
 h1 {
-
   color: #333;
   text-align: center;
   font-family: 'Montserrat', sans-serif;
 }
 
-
-
-input[type="file"] ::-webkit-file-upload-button {
-
- border-radius: 50px; /* Hace el botón redondeado */
+input[type="file"]::-webkit-file-upload-button {
+  border-radius: 50px; /* Hace el botón redondeado */
   border: none; /* Remueve el borde predeterminado */
   padding: 10px; /* Añade un poco de espaciado alrededor del botón */
   background-color: #f0f0f0; /* Añade un color de fondo */
   color: #333; /* Añade un color de texto */
   font-family: 'Montserrat', sans-serif;
-	font-size: 16px; /* Añade un tamaño de texto */
+  font-size: 16px; /* Añade un tamaño de texto */
   cursor: pointer; /* Hace el cursor un puntero al pasar sobre el botón */
   display: none;
 }
-
 
 button {
   background-color: #C42847;
@@ -58,15 +50,19 @@ button {
   color: white;
   cursor: pointer;
   font-size: 16px;
-  padding: 10px;
-  margin-top: 10px;
-	font-family: 'Montserrat', sans-serif;
+  padding: 5px 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border: 5px;
+  border-radius: 5px;
 
+  font-family: 'Montserrat', sans-serif;
 }
 
 button:hover {
   background-color: #3e8e41;
 }
+
 
 p {
 	font-family: 'Montserrat', sans-serif;
@@ -75,3 +71,4 @@ p {
   margin-top: 20px;
   text-align: center;
 }
+
