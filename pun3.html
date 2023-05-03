@@ -21,6 +21,7 @@
     <button type="button" id="reset-button">Reiniciar</button>
  <div id="result" style="display: none;">
   <p>El diseño contiene <span id="pixel-count"></span> puntadas aproximadamente.</p>
+   <p>Tiempo estimado de producción: <span id="tiempo-estimado"></span> minutos.</p>
 </div>
   </form>
 
@@ -84,7 +85,11 @@ calculateButton.addEventListener('click', () => {
       count++;
     }
   }
-  pixelCount.textContent = Math.round(((count * puntadas)*1.34));
+  const puntadasAproximadas = Math.round(((count * puntadas)*1.34));
+  const tiempoEstimado = Math.round(puntadasAproximadas / 600 * 60); // Calcula el tiempo estimado en minutos
+  pixelCount.textContent = puntadasAproximadas;
+  const tiempoEstimadoElement = document.querySelector('#tiempo-estimado');
+  tiempoEstimadoElement.textContent = tiempoEstimado;
 
     // Mostrar el resultado
   const result = document.querySelector('#result');
