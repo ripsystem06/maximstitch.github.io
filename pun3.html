@@ -85,7 +85,7 @@ calculateButton.addEventListener('click', () => {
       count++;
     }
   }
-  const puntadasAproximadas = Math.round(((count * puntadas)*1.34)).toFixed(2);
+  const puntadasAproximadas = Math.round(((count * puntadas)*1.34));
   const tiempoEstimado = Math.round(puntadasAproximadas / 600 ).toFixed(2); // Calcula el tiempo estimado en minutos
   pixelCount.textContent = puntadasAproximadas;
   const tiempoEstimadoElement = document.querySelector('#tiempo-estimado');
