@@ -35,16 +35,12 @@ const pixelCount = document.querySelector('#pixel-count');
 var puntadas = 0.022;
 
 var originalImage = null; // Variable global para almacenar la imagen original sin escalar
-    var resetTime = null; // Variable global para almacenar el tiempo de reinicio del formulario
 
 function resetForm() {
   preview.src = '';
   input.value = '';
   pixelCount.textContent = '';
-  productionTime.textContent = '';
   document.querySelector('#result').style.display = 'none';
-  calculateButton.disabled = true; // Desactivar el botón de "Calcular"
-  resetTime = new Date(); // Almacenar la hora actual
 }
 
 input.addEventListener('change', (event) => {
@@ -57,12 +53,6 @@ input.addEventListener('change', (event) => {
     image.src = reader.result;
     image.addEventListener('load', () => {
       // Escalar la imagen
-       if (input.files.length === 0) {
-    calculateButton.disabled = true;
-  } else {
-    calculateButton.disabled = false;
-  }
-});
       const maxHeight = 200;
       const scaleFactor = maxHeight / image.height;
       const width = image.width * scaleFactor;
@@ -107,13 +97,6 @@ calculateButton.addEventListener('click', () => {
   setTimeout(() => { result.style.display = 'none'; }, 9000);
     setTimeout(() => { preview.src = ''; }, 9000);
 });
-    function resetForm() {
-  // ...
-  calculateButton.disabled = true;
-  setTimeout(() => {
-    calculateButton.disabled = false;
-  }, 9000);
-}
 
 resetButton.addEventListener('click', () => {
   resetForm();
