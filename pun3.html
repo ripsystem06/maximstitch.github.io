@@ -24,15 +24,14 @@
    <p>Tiempo estimado de producción: <span id="tiempo-estimado"></span> minutos.</p>
 </div>
   </form>
-
   <script>
-    alert("Esto es un simulador para calcular un aproximado de puntadas para un diseño.\nEl archivo debe de estar en formato PNG al tamaño real en que se bordara.\nInstrucciones:\n-Carga un archivo\n-Presiona Calcular y obten resultado\n-Presiona reiniciar y carga otro archivo \n \n El tipo estimado de produccion es por unidad en una velocidad de 600 RPM")
+    alert("Simulador para un calculo aproximado de puntadas de un bordado.\nEl archivo debe de estar en formato PNG al tamaño real en que se bordara.\nInstrucciones:\n-Carga un archivo\n-Presiona Calcular y obten resultado\n-Presiona reiniciar y carga otro archivo \n \n El tiempo estimado de produccion es por unidad en una velocidad de 600 RPM \n \n Esto puede variar dependiendo de el diseño")
     const input = document.querySelector('input[type="file"]');
 const preview = document.querySelector('#preview');
 const calculateButton = document.querySelector('#calculate-button');
 const resetButton = document.querySelector('#reset-button');
 const pixelCount = document.querySelector('#pixel-count');
-var puntadas = 0.022;
+var puntadas = 0.023;
 
 var originalImage = null; // Variable global para almacenar la imagen original sin escalar
 
@@ -85,7 +84,7 @@ calculateButton.addEventListener('click', () => {
       count++;
     }
   }
-  const puntadasAproximadas = Math.round(((count * puntadas)*1.34));
+  const puntadasAproximadas = Math.round(((count * puntadas)*1.343));
   const tiempoEstimado = Math.round(puntadasAproximadas / 600 ).toFixed(2); // Calcula el tiempo estimado en minutos
   pixelCount.textContent = puntadasAproximadas;
   const tiempoEstimadoElement = document.querySelector('#tiempo-estimado');
